@@ -3,21 +3,22 @@ Redmine Airbrake notifier
 
 This plugin notifies to Airbrake when errors occur.
 
-You can use (Errbit)[https://github.com/errbit/errbit] instead of Airbrake.
+You can use [Errbit](https://github.com/errbit/errbit) instead of Airbrake.
 
 Installation
-===============================
+------------------------------
 
 Type below commands:
 
     $ cd $RAILS_ROOT/plugins
     $ git clone git://github.com/suer/redmine_airbrake_notifier.git
-    $ cp config/initializers/airbrake.rb.example config/initializers/airbrake.rb
-
-Edit config/initializes/airbrake.rb
 
 Then, restart your redmine.
 
+Preference
+------------------------------
+
+Set URL and API key at Airbrake tab in Administration page.
 
 Requirements
 ------------------------------
