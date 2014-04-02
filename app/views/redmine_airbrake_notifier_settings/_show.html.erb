@@ -1,0 +1,15 @@
+<%= form_tag :controller => 'airbrake_notifier_settings', :action => 'update' do |f| %>
+<div class="box tabular">
+<p>
+  <label>URL</label>
+  <%= text_field_tag :url, Setting.plugin_redmine_airbrake_notifier[:url], :size => 80 %>
+</p>
+<p>
+  <label>API Key</label>
+  <%= text_field_tag :api_key, Setting.plugin_redmine_airbrake_notifier[:api_key], :size => 80 %>
+</p>
+</table>
+</div>
+<%= submit_tag l(:button_save) %>
+<% end %>
+

@@ -1,2 +1,1 @@
-# Plugin's routes
-# See: http://guides.rubyonrails.org/routing.html
+match 'airbrake_notifier_settings/:action', :controller => 'airbrake_notifier_settings', :via => [:get, :post]
