@@ -9,13 +9,13 @@ class AirbrakeNotifierSettingsController < ApplicationController
 
     configure_airbrake(url, api_key)
 
+    flash[:notice] = l(:notice_successful_update)
     redirect_to :controller => 'settings', :action => 'index', :tab => 'redmine_airbrake_notifier'
   end
 
   private
   def save_plugin_settings(url, api_key)
-    Setting.plugin_redmine_airbrake_notifier[:url] = url
-    Setting.plugin_redmine_airbrake_notifier[:api_key] = api_key
+    Setting.plugin_redmine_airbrake_notifier = {"url" => url, "api_key" => api_key}
   end
 
   def configure_airbrake(url, api_key)
